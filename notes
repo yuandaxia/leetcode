@@ -4,3 +4,6 @@ ArrayList<Integer> al = new ArrayList<Integer>();
     al.remove(0);
     al.size();
     al.isEmpty();
+    al.add(object);
+    al.add(index,object);
+    al.set(index,object);
