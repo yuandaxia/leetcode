@@ -1,1 +1,6 @@
-notes
+ArrayList<Integer> al = new ArrayList<Integer>();
+    al.contains(1);
+		al.get(0);
+		al.remove(0);
+		al.size();
+		al.isEmpty();
