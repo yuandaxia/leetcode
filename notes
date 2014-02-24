@@ -7,3 +7,4 @@ ArrayList<Integer> al = new ArrayList<Integer>();
     al.add(object);
     al.add(index,object);
     al.set(index,object);
+int [] a = Arrays.copyOfRange(a, 1, 5);
