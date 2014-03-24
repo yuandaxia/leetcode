@@ -8,3 +8,5 @@ ArrayList<Integer> al = new ArrayList<Integer>();
     al.add(index,object);
     al.set(index,object);
 int [] a = Arrays.copyOfRange(a, 1, 5);
+
+after open brower what happens
