@@ -10,3 +10,15 @@ ArrayList<Integer> al = new ArrayList<Integer>();
 int [] a = Arrays.copyOfRange(a, 1, 5);
 
 after open brower what happens
+
+Stack<Character> s = new Stack<Character>();
+degenerate tree， find common ancestor worsest O(n2)
+
+for(Map.Entry<Float,Integer> entry : hm.entrySet()){
+				 if(entry.getValue()+ duplicate>max){
+					 max = entry.getValue()+ duplicate;
+				 }
+			 }
+			 if(hm.containsKey(k)){
+					 hm.put(k, hm.get(k)+1);
+				 }else hm.put(k,1);
