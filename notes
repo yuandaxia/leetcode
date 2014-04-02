@@ -22,3 +22,11 @@ for(Map.Entry<Float,Integer> entry : hm.entrySet()){
 			 if(hm.containsKey(k)){
 					 hm.put(k, hm.get(k)+1);
 				 }else hm.put(k,1);
+Integer.parseInt(str)
+String.valueOf();
+StringBuffer sb = new StringBuffer();
+sb.length();
+sb.delete(i,j)
+sb.deleteCharAt(i)
+
+int 2 pow 32 -1
