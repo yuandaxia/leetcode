@@ -1,0 +1,12 @@
+Static variables represent global state. That's hard to reason about and hard to test: if I create a new instance of an 
+object, I can reason about its new state within tests. If I use code which is using static variables, it could be in 
+any state - and anything could be modifying it.
+
+I could go on for quite a while, but the bigger concept to think about is that the tighter the scope of something, 
+the easier it is to reason about. We're good at thinking about small things, but it's hard to reason about the state 
+of a million line system if there's no modularity. This applies to all sorts of things, by the way - not just static 
+variables.
+
+statics have a lifetime that matches the entire runtime of the program. 
+t isn’t associated with an instance of a class. Instead, the member belongs to the class itself. 
+As a result, you can access the static member without first creating a class instance.
