@@ -30,3 +30,6 @@ sb.delete(i,j)
 sb.deleteCharAt(i)
 
 int 2 pow 32 -1
+
+
+ forward slash [ / ] , back slash [ \ ], dash [ - ], apostrophe [ ' ], semi-colon [ ; ], colon [ : ] and underscore [ _ ].
