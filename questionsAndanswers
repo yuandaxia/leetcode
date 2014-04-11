@@ -10,3 +10,6 @@ variables.
 statics have a lifetime that matches the entire runtime of the program. 
 t isn’t associated with an instance of a class. Instead, the member belongs to the class itself. 
 As a result, you can access the static member without first creating a class instance.
+
+
+Top k http://rritw.com/a/JAVAbiancheng/JAVAzonghe/20130602/362595.html
