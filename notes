@@ -33,3 +33,16 @@ int 2 pow 32 -1
 
 
  forward slash [ / ] , back slash [ \ ], dash [ - ], apostrophe [ ' ], semi-colon [ ; ], colon [ : ] and underscore [ _ ].
+
+
+try(BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
+        StringBuilder sb = new StringBuilder();
+        String line = br.readLine();
+
+        while (line != null) {
+            sb.append(line);
+            sb.append(System.lineSeparator());
+            line = br.readLine();
+        }
+        String everything = sb.toString();
+    }
