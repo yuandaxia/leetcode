@@ -13,3 +13,11 @@ As a result, you can access the static member without first creating a class ins
 
 
 Top k http://rritw.com/a/JAVAbiancheng/JAVAzonghe/20130602/362595.html
+
+
+
+You can think in serialization as the process to convert an object instance, into a sequence of bytes ( which may be binary or not depends on the implementation ) .
+
+It is very useful when you want to transmit one object data across the network, for instance from one JVM to another.
+
+The keyword transient in Java used to indicate that the variable should not be serialized. - 
