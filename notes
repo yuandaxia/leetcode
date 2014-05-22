@@ -46,3 +46,5 @@ try(BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
         }
         String everything = sb.toString();
     }
+
+ public synchronized void enqueue(T item) throws InterruptedException {
