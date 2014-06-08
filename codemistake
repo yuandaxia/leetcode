@@ -14,3 +14,9 @@
         }
         return res;
     }
+
+
+           String str = strs[i];
+            char [] temp = str.toCharArray();
+            Arrays.sort(temp);
+            String newStr = String.valueOf(temp);//!!!!!!!!!!!!!!!!!!!!!!!!
