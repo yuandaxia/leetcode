@@ -20,3 +20,35 @@
             char [] temp = str.toCharArray();
             Arrays.sort(temp);
             String newStr = String.valueOf(temp);//!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+public List<TreeNode> generateTrees(int n) {
+        return buildTree(1,n);
+    }
+    
+    private  ArrayList<TreeNode> buildTree(int start, int end){
+        //if(start>end) return null; this is wrong!!!!!!!!!!!!!!!!!!!!!!
+        
+        ArrayList<TreeNode> res=  new ArrayList<TreeNode>();
+        if(start>end){
+            res.add(null);
+            return res;
+        }
+        
+        for(int i=start;i<=end;i++){
+            TreeNode node = new TreeNode(i);
+            ArrayList<TreeNode> left = buildTree(start, i-1);
+            ArrayList<TreeNode> right = buildTree(i+1, end);
+            for(int p=0; p<left.size();p++){
+                TreeNode l = left.get(p);
+                for(int q=0;q<right.size();q++){
+                    TreeNode r = right.get(q);
+                    node.left=l;
+                    node.right=r;
+                    res.add(node);
+                }
+            }
+        }
+        return res;
+        
+    }
