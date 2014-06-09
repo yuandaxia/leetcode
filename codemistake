@@ -52,3 +52,31 @@ public List<TreeNode> generateTrees(int n) {
         return res;
         
     }
+
+
+
+ public ListNode insertionSortList(ListNode head) {
+        ListNode fakeHead = new ListNode(Integer.MIN_VALUE);
+        //fakeHead.next =head;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        ListNode node = head;
+        while(node!=null){
+            ListNode next = node.next;
+            ListNode pre = fakeHead;
+            while(pre.next!=null&&pre.next.val<node.val){
+                pre = pre.next;
+            } 
+            
+            
+            node.next = pre.next;
+            pre.next = node;
+            
+            
+            
+            node = next;
+        }
+        
+        
+        
+        return fakeHead.next;
+    }
