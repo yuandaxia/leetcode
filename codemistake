@@ -140,3 +140,38 @@ for(int i=0;i<num.length;i++){
             }
             
         }
+
+// min window
+ int start = 0, min=Integer.MAX_VALUE;
+        int rS=0, rE=0;
+        for(int i=0;i<S.length();i++){
+            char c = S.charAt(i);
+           
+            if(needToRead[c]>alreadyRead[c]){////////////////////////////////////
+                alreadyReadCount++;//////////////////////////// order
+            }////////////////////////////////////
+             alreadyRead[c]++;////////////////////
+            if(alreadyReadCount==needToReadCount){
+    
+                while(start<S.length()){
+                    if(needToRead[S.charAt(start)]==0){
+                        start++;
+                    }else if(needToRead[S.charAt(start)]<alreadyRead[S.charAt(start)]){
+                        alreadyRead[S.charAt(start)]--;
+                        start++;
+                    }else break;
+                }
+                if(i-start<min){
+                    min = i-start;
+                    rS = start;
+                    rE = i;
+                }
+                
+                
+            }
+        }
+        if(alreadyReadCount<T.length()) return "";// condition return ""
+        return S.substring(rS,rE+1);
+
+
+
