@@ -73,5 +73,15 @@ http://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
 Hashtable vs binary seach tree
 http://brackece.wordpress.com/2012/09/18/hash-table-vs-binary-search-tree/
 
+Thread vs process
+The typical difference is that threads (of the same process) run in a shared memory space, while processes run in separate memory spaces.
+
+4.  Processes are independent of each other.  Threads, since they 
+share the same address space are interdependent, so caution 
+must be taken so that different threads don't step on each other.  
+This is really another way of stating #2 above.
+						
+5.  A process can consist of multiple threads.
+
 
 
