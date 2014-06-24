@@ -70,6 +70,8 @@ Decorator pattern allows to add new functionality an existing object without alt
 This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class.
 http://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
 
+Hashtable vs binary seach tree
+http://brackece.wordpress.com/2012/09/18/hash-table-vs-binary-search-tree/
 
 
 
