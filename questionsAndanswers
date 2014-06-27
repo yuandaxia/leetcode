@@ -83,5 +83,5 @@ This is really another way of stating #2 above.
 						
 5.  A process can consist of multiple threads.
 
-
-
+Runnable and Callable
+http://stackoverflow.com/questions/141284/the-difference-between-the-runnable-and-callable-interfaces-in-java
