@@ -1,0 +1,35 @@
+struct node* insert(struct node* node, int data)
+
+{
+
+/* 1. If the tree is empty, return a new,
+
+single node */
+
+if (node == NULL)
+
+return(newNode(data));
+
+else
+
+{
+
+/* 2. Otherwise, recur down the tree */
+
+if (data <= node->data)
+
+node->left  = insert(node->left, data);
+
+else
+
+node->right = insert(node->right, data);
+
+
+
+/* return the (unchanged) node pointer */
+
+return node;
+
+}
+
+}
