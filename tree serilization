@@ -1,0 +1,38 @@
+public ArrayList<Integer> serilization(Node root){
+  ArrayList<Character> result = new ArrayList<Character>();
+  serilize(root, result);
+  
+  return result;
+}
+
+private Chharacter serilize(Node node, ArrayList<Character> al){
+  if(node==null){
+    al.add('#');
+    return;
+  }
+  al.add(node.val);
+  serilize(node.left, al);
+  serilize(node.right, al);
+}
+
+public Node des(ArrayList<Character> al){
+  int [] pos = new int[]{0};
+  return deserilize(al, pos);
+  
+}
+
+private Node deserilize(ArrayList<Character> al, int [] pos){
+    int p = pos[0];
+    if(p>=al.size()){
+      return null;
+    }
+    if(al.get(p)=='#'){
+      pos[0] += 1;
+      return null;
+    }
+    Node node = new Node(al.get(p));
+    pos[0] +=1;
+    node.left = deserilize(al, pos);
+    node.right = deserilize(al, pos);
+    return node;
+}
