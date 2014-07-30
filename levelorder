@@ -1,0 +1,19 @@
+http://leetcode.com/2010/09/binary-tree-level-order-traversal-using_17.html
+
+void printLevel(BinaryTree *p, int level) {
+  if (!p) return;
+  if (level == 1) {
+    cout << p->data << " ";
+  } else {
+    printLevel(p->left, level-1);
+    printLevel(p->right, level-1);
+  }
+}
+ 
+void printLevelOrder(BinaryTree *root) {
+  int height = maxHeight(root);
+  for (int level = 1; level <= height; level++) {
+    printLevel(root, level);
+    cout << endl;
+  }
+}
