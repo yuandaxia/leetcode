@@ -12,6 +12,10 @@ t isn’t associated with an instance of a class. Instead, the member belongs to
 As a result, you can access the static member without first creating a class instance.
 
 
+HashMap and hashfunction
+http://stackoverflow.com/questions/9364134/what-hashing-function-does-java-use-to-implement-hashtable-class
+
+
 Top k http://rritw.com/a/JAVAbiancheng/JAVAzonghe/20130602/362595.html
 
 
