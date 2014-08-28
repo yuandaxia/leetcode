@@ -104,3 +104,42 @@ This is really another way of stating #2 above.
 
 Runnable and Callable
 http://stackoverflow.com/questions/141284/the-difference-between-the-runnable-and-callable-interfaces-in-java
+
+
+
+
+Deadlock
+
+If you can guarantee that locks will always be acquired in a consistent order, then your program will not deadlock.
+public static Object cacheLock = new Object();
+  public static Object tableLock = new Object();
+  ...
+  public void oneMethod() {
+    synchronized (cacheLock) {
+      synchronized (tableLock) { 
+        doSomething();
+      }
+    }
+  }
+  public void anotherMethod() {
+    synchronized (tableLock) {
+      synchronized (cacheLock) { 
+        doSomethingElse();
+      }
+    }
+  }
+  
+  How to avoid deadlocks
+
+One of the best ways to prevent the potential for deadlock is to avoid acquiring more than one lock at a time, 
+which is often practical. However, if that is not possible, you need a strategy that ensures you acquire 
+multiple locks in a consistent, defined order.
+
+Depending on how your program uses locks, it might not be complicated to ensure that you use a 
+consistent locking order. In some programs, such as in Listing 1, all critical locks that might participate 
+in multiple locking are drawn from a small set of singleton lock objects. In that case, you can define a 
+lock acquisition ordering on the set of locks and ensure that you always acquire locks in that order. 
+Once the lock order is defined, it simply needs to be well documented to encourage consistent use throughout 
+the program.
+  
+  
